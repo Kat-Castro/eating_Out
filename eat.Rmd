@@ -42,7 +42,13 @@ barchartGC(~race + eatout,data=mydata, type="percent")
   
 The graph represented above shows that more white people agree to eat out compared to black or other colored people.
 
-
+```{r}
+table1 <- xtabs(~race + eatout, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
+  
+The numerical results presented above shows that more white people say yes to eating out. The percentage calculated was 83.11%. In the other case for black people, we have 69.04% in choosing to eat out. The final result is 72.12% of other race/color eating out. This proves that more white people enjoy the option of eating out compared to black or other people.
 
 
 
